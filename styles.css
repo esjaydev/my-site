@@ -1,0 +1,125 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    width: 100vw;
+    height: 50vh;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+:root {
+    --textColor: white;
+    --bgColor: rgb(27, 21, 21);
+    --acColor: rgb(236, 207, 112);
+    --acColor2: rgb(112, 221, 236);
+    --fontFamily: system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        'Open Sans',
+        'Helvetica Neue',
+        sans-serif;
+}
+
+body {
+    background-color: var(--bgColor);
+}
+
+h1 {
+    font-family: var(--fontFamily);
+    line-height: 24pt;
+    margin-bottom: 1rem;
+    color: var(--textColor);
+}
+
+p {
+    font-family: var(--fontFamily);
+    color: var(--textColor);
+}
+
+.container {
+    width: fit-content;
+    height: auto;
+    margin: 10rem auto;
+}
+
+.shrimp {
+    font-size: 48pt;
+    transform: translateX(-10pt);
+    transition: 1s;
+}
+
+.shrimp:hover {
+    transform: translate(-10pt, -20rem);
+    cursor: default;
+}
+
+.name {
+    color: var(--acColor);
+    transition: 1s;
+}
+
+.name:hover {
+    cursor: default;
+    color: var(--acColor2);
+}
+
+a {
+    text-decoration: none;
+    color: var(--bgColor);
+}
+
+.more-info {
+    border-style: none;
+    font-family: var(--fontFamily);
+    padding: 0.5rem;
+    border-radius: 5pt;
+    cursor: pointer;
+    background-color: var(--textColor);
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.more-info:hover {
+    background-color: var(--acColor);
+    transition: 200ms;
+}
+
+.more-info:active {
+    background-color: var(--acColor2);
+}
+
+.disclaimer {
+    font-size: 10pt;
+}
