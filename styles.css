@@ -50,6 +50,7 @@ h6 {
         'Open Sans',
         'Helvetica Neue',
         sans-serif;
+    --evilColor: rgb(136, 26, 26);
 }
 
 body {
@@ -80,8 +81,41 @@ p {
     transition: 1s;
 }
 
+@keyframes shrimp-jiggle {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(8deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-10deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-8deg);
+    }
+
+    90% {
+        transform: rotate(8deg);
+    }
+}
+
 .shrimp:hover {
-    transform: translate(-10pt, -20rem);
+    animation: shrimp-jiggle 2s ease 0s 1 normal forwards;
     cursor: default;
 }
 
@@ -109,11 +143,18 @@ a {
     background-color: var(--textColor);
     margin-bottom: 0.5rem;
     display: inline-block;
+    transition: 1000ms;
 }
 
 .more-info:hover {
-    background-color: var(--acColor);
-    transition: 200ms;
+    color: var(--acColor);
+    background-color: var(--evilColor);
+    border-radius: 100px;
+    scale: 3;
+    box-shadow: 0 0 50px black;
+    transform: translate(30px, 0);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
 }
 
 .more-info:active {
